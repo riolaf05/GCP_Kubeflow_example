@@ -1,0 +1,20 @@
+#See: https://www.kubeflow.org/docs/pipelines/sdk/component-development/
+name: Train
+description: Performs some training work.
+inputs:
+- {name: Input 1} #this is how variables must be called in main jupyter
+- {name: Output model, type: GCSPath}
+outputs:
+- name: Output model URI
+  type: GCSPath
+implementation:
+  container:
+    image: eu.gcr.io/ai-vqc/kubeflow_train:latest
+    command: [
+      python3, train.py,
+      --input-filename,  {inputValue:  Input 1},
+      --output-model-path,  {inputValue: Output model},
+      
+      --output-model-path-file,   {outputPath: Output model URI},
+      ]
+   
