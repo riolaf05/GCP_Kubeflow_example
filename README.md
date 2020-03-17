@@ -17,7 +17,7 @@ See [here](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-pipeli
 
 ```console
 export DEPLOYMENT_NAME=kf-test
-export PROJECT_ID=ai-vqc
+export PROJECT_ID=<PROJECT_NAME>
 export ZONE=europe-west1-d
 gcloud config set project ${PROJECT_ID}
 gcloud config set compute/zone ${ZONE}
