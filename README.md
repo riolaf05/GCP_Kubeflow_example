@@ -66,7 +66,7 @@ this will build (reusable) and push components containers.
 
 To build components directly it is possible to use the `dsl.ContainerOp` object (see [here](https://www.kubeflow.org/docs/pipelines/sdk/build-component/)) this is easier but those components are not reusable.  
 
-See examples [here](https://docs.seldon.io/projects/seldon-core/en/latest/examples/kubeflow_seldon_e2e_pipeline.html).
+See examples [here](https://github.com/kubeflow/examples/blob/master/demos/simple_pipeline/gpu-example-pipeline.py).
 
 3. For the deploy step run the `routine/build_routine.sh` script to build custom model execution script: 
 
